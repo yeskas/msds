@@ -67,8 +67,8 @@ class DCSimulator(object):
         print '%s scheduler\'s performance:' % self.sched
 
         # hardcoded input for now
-        units = [(2,3), (7,1), (1,23), (8,5), (2,8)]
-        tasks = [(3,4), (1,4), (4,7), (1,3), (5,4), (9,3)]
+        units = [(2,3), (7,3), (1,3)]
+        tasks = [(2,11), (2,12), (2,13), (3,1), (1,7), (1,8), (1,9)]
         self.init_nodes(units)
 
         # scheduler algorithm
