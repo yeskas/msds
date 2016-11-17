@@ -10,9 +10,10 @@ Structure of code
 - All schedulers subclass the Scheduler class (that uses the terminology of boxes and rectangles)
 
 Potential future extensions:
-- Inputs: add an Input class that can handle both hardcoded lists, files, (random) generators, etc., so that an instance of Input can be passed to the Simulator constructor
-- Handle streams of resources and tasks instead of lists by adding time intervals between tuples, e.g (2,3) t1 (3,1) t2 etc. This would require few modifications (multiple calls to feed_units() and feed_tasks(), and get_order() would need to be called every second)
+- Inputs: adding an Input class that can handle both hardcoded lists, files, (random) generators, etc., so that an instance of Input can be passed to the Simulator constructor
+- Handling streams of resources and tasks instead of lists by adding time intervals between tuples, e.g (2,3) t1 (3,1) t2 etc. This would require few modifications (multiple calls to feed_units() and feed_tasks(), and get_order() would need to be called every second)
 - Taking width of boxes (pls see schedulers.py for terminology) into consideration in get_order()
+- Factoring the average wait time of a task into decisions (in case of streams with time intervals)
 
 Other notes:
 - For the current input OptimalScheduler outperforms FCFSScheduler by about 30%; to try different inputs pls modify lines 70 & 71 in simulator.py
